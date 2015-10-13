@@ -1,0 +1,21 @@
+# A sample of the learned clusters from clustering our 25,000 auto extracted keywords and phrases into 3000 clusters using k-means algorithm from sci-kit learn
+0|switches
+1|coding testing,complete software,entire software,lifecycle requirements,requirements gathering design
+2|build solutions,code base,code bases,codebase,define best,deliver products,existing code,existing features,existing ones,existing product,existing production,existing services,feature,feature set,fine tune,flawless,implement enhancements,implement product,legacy code,migration activities,necessary changes,product architecture,quality applications,refactor,refactoring,reuse,rewrite,usefulness
+3|application hosting,application web,database web,databases web,enterprise technologies,server setup,technologies used
+4|bi business,bi stack,mdx,olap,sql bi,ssas,ssis,ssis developer,ssis ssas,ssrs ssas
+5|bi lingual,bilingual,chinese,fluent,french,german,japanese,korean,lingual,localized,portuguese,russian,spanish,speak,speaker
+6|connectivity,firewalls routers switches,firewalls switches,infrastructure environment,load balancers firewalls,mobile computing,network components,network devices,network hardware,network operating systems,network servers,networking equipment,networks servers,operating systems applications,operating systems network,platforms operating systems,routers switches firewalls,security hardware,servers network,servers networking,servers storage,switches routers,switches routers firewalls,systems servers
+7|detail design,requirements review
+8|company specializing,consulting firm,consulting organization,encouraged,genesis10,matlen silver,moment,prefered,providing services,pwc,sponsored,sponsoring,sponsorships
+9|narrative
+10|project progress
+11|attention,attentive,close attention,compromising,conscientious,conscious,customer oriented,customer service,customer service communication,customer service focus,customer service oriented,deliver results,delivering results,demonstrated commitment,dependability,dependable,detailed oriented,diligence,diligent,do attitude,ethic,excellent follow,extremely detail oriented,good attention,great customer service,habits,impeccable,meticulous,meticulous attention,organized,orientated,outgoing,outstanding customer service,pay attention,personality,pleasant,positive attitude,producing quality,professional appearance,professional attitude,professional demeanor,punctual,punctuality,quality customer service,quality results,quantity,sacrificing,self motivated detail oriented,self motivation,superb,superior,thoroughness,traits
+32|c# wcf,microsoft c#,microsoft.net,mvc web,wcf web services,web forms,webforms,windows forms,winforms,wpf wcf
+1197|apache solr,elasticsearch,lucene,lucene solr,search,search engines,search technologies,solr,solr lucene
+1272|enterprise solution,financial technology,ft,polaris
+1277|aiding,appropriate changes,deciding,identifying problems,implementing change,implementing changes,making appropriate,proposing,providing recommendations,recommending changes,standardizing
+1278|accurate fashion,analyze troubleshoot,diagnose,diagnose troubleshoot,hardware problems,issues pertaining,performance problems,problems independently,resolve complex,resolve hardware,resolve network,resolve operational,resolve software,resolve system,resolve technical problems,solve issues,trouble shoot,troubleshoot,troubleshoot network,troubleshoot resolve,troubleshoot system,vendor support
+1279|attorneys,law firm,law firms,litigation
+1280|bethesda,co,englewood,reston,vienna
+1281|crafted,create compelling,design mobile,examples,mobile,mobile application,portfolio,visual
