@@ -10,6 +10,7 @@ Currently the scripts are in the form of Jupyter python notebooks. I will shortl
 ## Required Python libraries:
 
 * nltk (for sentence tokenizer in pre-processing file)
+* beautiful-soup (for html parsing in pre-processing script)
 * numpy
 * gensim (for Word2Vec implementation)
 * scikit-learn (only needed for clustering)
