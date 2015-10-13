@@ -7,13 +7,10 @@ See https://github.com/DiceTechJobs/SolrConfigExamples for example solr configur
 
 Currently the scripts are in the form of Jupyter python notebooks. I will shortly convert these into command line scripts with accompanying documentation.
 
-Required Python libraries:
+## Required Python libraries:
 
-nltk (for sentence tokenizer)
-
-numpy
-
-gensim (for Word2Vec implementation)
-
-scikit-learn (only needed for clustering)
+* nltk (for sentence tokenizer)
+* numpy
+* gensim (for Word2Vec implementation)
+* scikit-learn (only needed for clustering)
 
