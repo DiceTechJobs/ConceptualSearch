@@ -1,0 +1,75 @@
+# sample of the 25,000 phrases auto-extracted using python code from our jobs data
+.com
+.net
+.net application
+.net applications
+.net architect
+.net asp
+.net asp.net
+.net c#
+.net c# asp.net
+.net c# sql
+.net c++
+.net code
+.net developer
+.net developers
+.net engineer
+.net environment
+.net framework
+.net framework c#
+.net frameworks
+.net html
+.net java
+.net javascript
+.net ms
+.net mvc
+.net platform
+.net programmer
+.net programming
+.net software
+.net software engineer
+.net sql
+.net sql server
+.net technologies
+.net technology
+.net web
+.net web application
+.net web applications
+
+aix
+aix hp
+aix linux
+aix solaris
+aix unix
+ajax
+ajax css
+ajax html
+ajax html5
+ajax javascript
+ajax javascript jquery
+ajax jquery
+ajax json
+ajax sql
+ajax web
+ajax xml
+
+c level
+c level executives
+c programming
+c python
+
+c#
+c# .net
+c# .net developer
+c# .net framework
+c# .net sql
+c# asp
+c# asp.net
+c# asp.net javascript
+c# asp.net mvc
+c# asp.net sql
+c# asp.net sql server
+c# asp.net web
+c# c
+c# c++
+c# developer
