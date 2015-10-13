@@ -1,6 +1,2 @@
-# ConceptualSearch
-Python code for training the Thomas Mikolov's Word2Vec model on a set of documents. Includes code to pre-process and tokenize documents, extract common terms and phrases by document frequency, train a word2vec model using the gensim implementation, and cluster the resulting word vectors using sci-kit learn's clustering libraries. The python scripts output a number of solr synonym files which can be used to enable conceptual search functionality within solr when combined with some custom dice solr plugins.
-
-See https://github.com/DiceTechJobs/SolrPlugins for solr plugins to utilize the learned vectors and synonym files within an Apache Solr search engine
-
-See https://github.com/DiceTechJobs/SolrConfigExamples for example solr configuration entries for configuring conceptual search within solr, including setting up the plugins.
+# Conceptual Search Notebooks
+These are a list of python jupyter notebooks for running the conceptual search code. These should be run in order (1,2,3, and any 4) to process the files (1), generate keywords and phrases (2), train the Word2Vec model (3), and then 4a or 4b or 4c to output either vector, top n term or cluster synonym files (see Lucene Revolution 2015 Talk http://lucenerevolution.org/sessions/implementing-conceptual-search-in-solr-using-lsa-and-word2vec/).
