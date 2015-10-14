@@ -15,3 +15,4 @@ Currently the scripts are in the form of Jupyter python notebooks. I will shortl
 * gensim (for Word2Vec implementation)
 * scikit-learn (only needed for clustering)
 
+Built using python 2.7.10. Untested with python 3
