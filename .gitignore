@@ -12,3 +12,5 @@
 **/.idea/*.*
 .idea
 *.iml
+
+*.ipynb_*

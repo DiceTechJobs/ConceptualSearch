@@ -31,3 +31,23 @@ def delete_files(folder, regex):
     matches = find_files(folder, regex)
     for full_path in matches:
         os.remove(full_path)
+
+def load_stop_words(stop_words_file):
+    stop_words = set()
+    with open(stop_words_file) as f:
+            for line in f:
+                word = line.strip()
+                if word[0] != "#":
+                    word = word.lower()
+                    stop_words.add(word)
+    return stop_words
+
+def load_keywords(stop_words_file):
+    keywords = set()
+    with open(stop_words_file) as f:
+            for line in f:
+                word = line.strip()
+                if word[0] != "#":
+                    word = word.lower().split(",")[0]
+                    keywords.add(word)
+    return keywords
