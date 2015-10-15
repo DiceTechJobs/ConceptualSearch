@@ -5,7 +5,7 @@ See https://github.com/DiceTechJobs/SolrPlugins for solr plugins to utilize the 
 
 See https://github.com/DiceTechJobs/SolrConfigExamples for example solr configuration entries for configuring conceptual search within solr, including setting up the plugins.
 
-Currently the scripts are in the form of Jupyter python notebooks. I will shortly convert these into command line scripts with accompanying documentation.
+Currently the scripts are in the form of Jupyter python notebooks, to be run in order (1,2,3 and 4). I will shortly convert these into command line scripts with accompanying documentation.
 
 ## Required Python libraries:
 
