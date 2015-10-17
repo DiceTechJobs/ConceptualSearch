@@ -21,7 +21,7 @@ The command line scripts should be run in order:
 
 2. extract_keywords.py - (optional) If you don't have a good and extensive set of keyphrases from your domain (e.g. your top 5,000 seach keywords and phrases, phrases being the important part) or you want to increase coverage beyond this list, run this script to extract all keywords and phrases above a specified document frequency threshold.
 
-3. train_word2vec_model.py - Trains and saves the Word2Vec model on the pre-processed documents from 1. Uses a set of keywords and phrases, such as those output from 2.
+3. train_word2vec_model.py - Trains and saves the Word2Vec model on the pre-processed documents from 1. Uses a set of keywords and phrases, such as those output from 2. Please take note of any runtime warnings. **Please note** - This model is very fast, but requires a C compiler to be available and pre-installed to make use of the C version under the covers, otherwise the much slower python implementation is used.
 
 ## Required Python libraries:
 
