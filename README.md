@@ -16,3 +16,10 @@ Currently the scripts are in the form of Jupyter python notebooks, to be run in 
 * scikit-learn (only needed for clustering)
 
 Built using python 2.7.10. Untested with python 3
+
+## Word2Vec
+The Word2Vec implementation is that of the excellent gensim package
+
+https://radimrehurek.com/gensim/models/word2vec.html
+
+This is an excellent package for topic modelling, and learning semantic representations of documents and words.
