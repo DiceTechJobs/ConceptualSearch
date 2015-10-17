@@ -19,7 +19,7 @@ The command line scripts should be run in order:
 
 1. pre_process_documents.py - this is needed to strip-out some punctuation characters (comma's, hyphens etc), parse html if needed, and separate out the sentences in the document. **If** you wish to skip this step and move to 2 or 3, provide a set of files to steps 2 and 3 with any punctuation you want removing stripped out, and with every new sentence on a separate line.
 
-2.extract_keywords.py - (optional) If you don't have a good and extensive set of keyphrases from your domain (e.g. your top 5,000 seach keywords and phrases, phrases being the important part) or you want to increase coverage beyond this list, run this script to extract all keywords and phrases above a specified document frequency threshold.
+2. extract_keywords.py - (optional) If you don't have a good and extensive set of keyphrases from your domain (e.g. your top 5,000 seach keywords and phrases, phrases being the important part) or you want to increase coverage beyond this list, run this script to extract all keywords and phrases above a specified document frequency threshold.
 
 3. train_word2vec_model.py - Trains and saves the Word2Vec model on the pre-processed documents from 1. Uses a set of keywords and phrases, such as those output from 2.
 
