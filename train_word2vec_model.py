@@ -23,6 +23,10 @@ if config.case_sensitive:
 else:
     stop_filter = fact_stop_word_filter(config.stop_words_file)
 
+# Simon Hughes: This is quite inefficient, as each function is applied in turn
+# resulting in multiple passes over the token stream. While not currently a
+# big performance bottleneck, could be much faster.
+#  - TODO: use functional composition to speed up
 is_a_synonym_filter = fact_is_synonym_filter(syn_mapper)
 analysis_chain = [clean_str,
                   white_space_tokenize,
