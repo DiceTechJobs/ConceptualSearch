@@ -1,7 +1,7 @@
 import time, hashlib, re
 from collections import defaultdict
-from Utils.string_utils import clean_str, strip_non_ascii, collapse_spaces
-from Utils.file_utils import find_files, delete_files, load_stop_words
+from Utils.string_utils import collapse_spaces
+from Utils.file_utils import find_files, load_stop_words
 
 def compute_ngrams(tokens, max_len = None, min_len = 1):
     """
@@ -265,7 +265,7 @@ for phrase_len in range(2, config.max_phrase_length + 1):
 
 print ""
 end = time.time()
-print("\t%iphrases found" % len(phrase_doc_freq))
+print("\t%i phrases found" % len(phrase_doc_freq))
 print("\ttook %i seconds" % (end - start))
 
 """ Remove Sub-Phrases """
@@ -284,12 +284,15 @@ for tpl_key in sorted(phrases, key = lambda k: -len(k)):
 print("%i sub-phrases found for removal" % len(to_remove))
 
 #Dump phrases to file
+cnt = 0
 with open(config.keywords_file, "w+") as f:
     for tpl in sorted(phrase_doc_freq.keys()):
         # phrases only
         if tpl not in to_remove:
+            cnt+=1
             joined = " ".join(tpl)
             f.write(joined + "\n")
 
+print("%i phrases written to the file: %s" % (cnt, config.keywords_file))
 full_end = time.time()
 print("Whole process took %s seconds" % str(full_end - script_start))
