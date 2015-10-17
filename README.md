@@ -18,7 +18,7 @@ Currently the scripts are in the form of Jupyter python notebooks, to be run in 
 Built using python 2.7.10. Untested with python 3
 
 ## Word2Vec
-The Word2Vec implementation is that of the excellent gensim package
+The Word2Vec implementation is that of the excellent gensim package. Contains an exellent implementation of LSA, LDA, Word2Vec and some other machine learning algorithms.
 
 https://radimrehurek.com/gensim/models/word2vec.html
 
