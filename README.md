@@ -10,7 +10,7 @@ See https://github.com/DiceTechJobs/SolrConfigExamples for example solr configur
 
 Currently the scripts are in the form of Jupyter python notebooks, to be run in order (1,2,3 and any of the 4's). 
 
-**UPDATE** I have added 3 of the 6 necessary command-line scripts if you want to avoid using Jupyer. These will pre-process the documents, and train the Word2Vec model. I need to add the final scripts to create the output files (or you can use the Jupyter notebooks 4.1, 4.2 and 4.3). The ./Settings folder contains example config files for each script, with a desription of eaching setting in the comments (hash prefixed). To call the command-line scripts, pass in the related config file as the only paramater, e.g.
+**UPDATE** I have added 3 of the 6 necessary command-line scripts if you want to avoid using Jupyer. These will pre-process the documents, and train the Word2Vec model. I need to add the final scripts to create the output files (or you can use the Jupyter notebooks 4.1, 4.2 and 4.3). The ./Settings folder contains example config files for each script, with a desription of each setting in the comments (hash prefixed). To call the command-line scripts, pass in the related config file as the only paramater, e.g.
 
 ```bash
 python pre_process_documents.py ./Settings/pre_process_documents.cfg
