@@ -8,7 +8,14 @@ See https://github.com/DiceTechJobs/SolrPlugins for solr plugins to utilize the 
 
 See https://github.com/DiceTechJobs/SolrConfigExamples for example solr configuration entries for configuring conceptual search within solr, including setting up the plugins.
 
-Currently the scripts are in the form of Jupyter python notebooks, to be run in order (1,2,3 and 4). I will shortly convert these into command line scripts with extensive accompanying documentation.
+Currently the scripts are in the form of Jupyter python notebooks, to be run in order (1,2,3 and 4). 
+
+**UPDATE** I have added 3 of the command line scripts. These will train the model. I need to add the final scripts to create the output files (or using Jupyter notebooks 4.*). The settings folder contains example config files for each script, with documentation describing eaching setting. To call the command line scripts, pass in the related config file as the solr paramater, e.g.
+
+```bash
+python pre_process_documents.py ./Settings/pre_process_documents.cfg
+```
+
 
 ## Required Python libraries:
 
@@ -17,6 +24,7 @@ Currently the scripts are in the form of Jupyter python notebooks, to be run in 
 * numpy
 * gensim (for Word2Vec implementation)
 * scikit-learn (only needed for clustering)
+* jupyter (to use the notebooks - jupyter is the new name for ipython)
 
 Built using python 2.7.10. Untested with python 3
 
