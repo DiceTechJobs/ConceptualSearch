@@ -30,40 +30,8 @@ def compute_ngrams(tokens, max_len = None, min_len = 1):
             ngrams.add(tuple(words)) # make a tuple so hashable
     return ngrams
 
-# is a valid token
-__bad_chars__ = "<>{}[]~@"
-__punct__ = set(".?!,;:")
-def is_valid_term(term):
-    # remove single char entries and only numeric
-    if len(term) == 0:
-        return False
-    if len(term) == 1:
-        #else misses c and r
-        if term.isalpha():
-            return True
-        return False
-    # no html or js terms
-    for c in __bad_chars__:
-        if c in term:
-            return False
-    if term[-1] in __punct__:
-        return False
-    if "function(" in term:
-        return False
-    if "!" in term or "?" in term:
-        return False
-    digit_chars = 0.0
-    for c in term:
-        if c.isdigit() or not c.isalnum():
-            digit_chars += 1.0
-    # 60% digits?
-    if (digit_chars / len(term)) >= 0.75:
-        return False
-    return True
-
-re1 = re.compile("[;:\'\"\*/\),\(\-\|\s]+")
-
 # we may want to keep some non-alpha characters, such as # in C# and + in C++, etc.
+re1 = re.compile("[;:\'\"\*/\),\(\-\|\s]+")
 def remove_punct(s):
     s = s.replace("'s"," ")
     return collapse_spaces(re1.sub(" ",s).strip())
@@ -72,6 +40,7 @@ def hash_string(s):
     hash_object = hashlib.md5(b'%s' % s)
     return str(hash_object.hexdigest())
 
+# recursive algorithm to eliminate shorter phrases with same or similar Doc Freq as longer phrases
 def find_sub_phrases_to_remove(tpl_phrase, valid_phrases, doc_freq, to_rem):
     if len(tpl_phrase) <= 1:
         return
@@ -169,8 +138,7 @@ too_freq = set([k for k in above_threshold if (doc_freq[k]/num_docs) >= config.m
 
 freq_terms = [k for k in above_threshold
               if  k not in stop_words and
-                  k not in too_freq and
-                  is_valid_term(k)]
+                  k not in too_freq]
 print("%s frequent terms identified for building phrases" % len(freq_terms))
 
 """ Find Phrases """
@@ -192,9 +160,12 @@ working_docs = [map(lambda (sid, sent): (sid, [sent]), d) for d in tokenized_doc
 working_freq_terms = set(freq_terms)
 
 # sentences with one or more phrases that are frequent enough (under the apriori algorithm closure priniciple)
+# don't bother whitling this down further at the start, almost all sentences have at least one freq term in them
 working_sent_ids = set(sent_ids)
-# don't bother whitling this down further at the start, almost all sentences have at least on freq term in them
 
+""" Apriori-like Algorithm for Phrase Extraction """
+# use the downward closure principle from the apriori algorithm (https://en.wikipedia.org/wiki/Apriori_algorithm)
+#  combined with an inverted index to very efficiently extract common phrases
 for phrase_len in range(2, config.max_phrase_length + 1):
     phrase_start = time.time()
     print "phrase_len", phrase_len
@@ -269,7 +240,7 @@ print("\t%i phrases found" % len(phrase_doc_freq))
 print("\ttook %i seconds" % (end - start))
 
 """ Remove Sub-Phrases """
-# there are a lot of short phrases that always or nearly always have the same DF as longer phrases that they constitute
+# there are a lot of short phrases that always or nearly always have the same DF as the longer phrases that they constitute
 
 # don't process unigrams
 valid_phrases = set(phrase_doc_freq.keys())
