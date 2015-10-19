@@ -45,7 +45,7 @@ https://radimrehurek.com/gensim/models/word2vec.html
 This is an excellent package for topic modelling, and learning semantic representations of documents and words.
 
 # Using Pre-Trained Word Vectors
-Google released a set of pre-trained word vectors, trained on a 100 billion words of the google news corpus. For those of you that aren't focused in a specialized domain but on a very broad set of documents, such as companies building a news search engine (like Reuters, Bloomberg, Governmental agencies, etc) you can just use this pre-trained model instead. Then you can skip the first 3 steps, and go directly to using one of the step 4 scripts above that take a pre-trained model and compute output synonym files, and that's all you should need. This post describes where to get the pre-trained vectors:https://groups.google.com/forum/#!topic/gensim/_XLEbmoqVCg. You can then use gensim's Word2Vec's model.load functionality:
+Google released a set of pre-trained word vectors, trained on a 100 billion words of the google news corpus. For those of you that aren't focused in a specialized domain but on a very broad set of documents, such as companies building a news search engine (like Reuters, Bloomberg, Governmental agencies, etc) you can just use this pre-trained model instead. Then you can skip the first 3 steps, and go directly to using one of the step 4 scripts above that take a pre-trained model and compute output synonym files, and that's all you should need. This post describes where to get the pre-trained vectors: https://groups.google.com/forum/#!topic/gensim/_XLEbmoqVCg. You can then use gensim's Word2Vec's model.load functionality:
 ```python
 model = Word2Vec.load(MODEL_FILE)
 ```
