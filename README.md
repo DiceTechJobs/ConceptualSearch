@@ -23,6 +23,11 @@ The command line scripts should be run in order:
 
 3. train_word2vec_model.py - Trains and saves the Word2Vec model on the pre-processed documents from 1. Uses a set of keywords and phrases, such as those output from 2. **Please note** - This model is very fast, but requires a C compiler to be available and pre-installed to make use of the C version under the covers, otherwise the much slower python implementation is used. If this is unavailable, you will get a run-time warning when the model is first trained.
 
+4. This step contains multiple files depending on the desired solution (see my talk):
+  1. Vector output - COMING SOON! See Jupyter Notebook 4.a
+  2. generate_topn_synonyms_file.py - Generates top n synonyms for each target keyword or phrase. This generates 2 files, a file with payloads, and a file without. The simplest use case is to use the file without payloads. Better performance can be gained using the payloads file to weight the synonyms by similarity. This can be done at query time using the queryboost parser. Note that to do this you need to tokenize on commas and whitespace at query time as we replace whitespace with commas to get around the multi-word synonym issue. Alternatively (and recommended) use synonym expansion at index time, along with the PayloadEdismax query parser, the PayloadAwareDefaultSimilarity class (use as default similarity or use schema similarity to configure per field), and ensure the fieldType for these fields contains the term 'payload' or 'vector'.
+  3. Cluster Synonyms - COMING SOON! See Jupyter Notebook 4.c
+
 ## Required Python libraries:
 
 * nltk (for sentence tokenizer in pre-processing file)
