@@ -8,9 +8,7 @@ See https://github.com/DiceTechJobs/SolrPlugins for solr plugins to utilize the 
 
 See https://github.com/DiceTechJobs/SolrConfigExamples for example solr configuration entries for configuring conceptual search within solr, including setting up the plugins.
 
-Currently the scripts are in the form of Jupyter python notebooks, to be run in order (1,2,3 and any of the 4's). 
-
-**UPDATE** I have added 3 of the 6 necessary command-line scripts if you want to avoid using Jupyer. These will pre-process the documents, and train the Word2Vec model. I need to add the final scripts to create the output files (or you can use the Jupyter notebooks 4.1, 4.2 and 4.3). The ./Settings folder contains example config files for each script, with a desription of each setting in the comments (hash prefixed). To call the command-line scripts, pass in the related config file as the only paramater, e.g.
+The scripts are in the form of Jupyter python notebooks, to be run in order (1,2,3 and any of the 4's), and as separate command line scripts (see below) if you don't want to use Jupyter. These notebooks and scripts will pre-process the documents, and train the Word2Vec model. I am in the process of adding the final scripts to create the output files and do the clustering (or you can use the Jupyter notebooks 4.1, 4.2 and 4.3). The ./Settings folder contains example config files for each script, with a desription of each setting in the comments (hash prefixed). To call the command-line scripts, pass in the related config file as the only paramater, e.g.
 
 ```bash
 python pre_process_documents.py ./Settings/pre_process_documents.cfg
