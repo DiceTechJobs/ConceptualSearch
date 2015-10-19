@@ -51,3 +51,5 @@ model = Word2Vec.load(MODEL_FILE)
 ```
 ## A Note on Synonym File Sizes
 If you are using Solr cloud, Zookeeper does not like any config files to be over 1M in size. So if your resulting synonym files are larger than this, you will either have to 1) change the default zookeeper settings, 2) split the synonym file into mutliple files and apply synonym filters in sequence, or 3) load synonyms from a database using a plugin (e.g. https://github.com/shopping24/solr-jdbc-synonyms)
+
+Please post any questions, bugs or feature requests to the issues list.
