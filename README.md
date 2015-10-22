@@ -24,7 +24,7 @@ The command line scripts should be run in order:
 4. This step contains multiple files depending on the desired solution (see my talk):
   1. Vector output - COMING SOON! See Jupyter Notebook 4.a
   2. generate_topn_synonyms_file.py - Generates top n synonyms for each target keyword or phrase. This generates 2 files, a file with payloads, and a file without. The simplest use case is to use the file without payloads. Better performance can be gained using the payloads file to weight the synonyms by similarity. This can be done at query time using the queryboost parser. Note that to do this you need to tokenize on commas and whitespace at query time as we replace whitespace with commas to get around the multi-word synonym issue. Alternatively (and recommended) use synonym expansion at index time, along with the PayloadEdismax query parser, the PayloadAwareDefaultSimilarity class (use as default similarity or use schema similarity to configure per field), and ensure the fieldType for these fields contains the term 'payload' or 'vector'.
-  3. Cluster Synonyms - COMING SOON! See Jupyter Notebook 4.c
+  3. generate_cluster_synonyms_file.py - Generates k clusters from the word vectors generated in the previous steps. These can be embedded directly in solr via a synonym file - no special plugins needed. I'd recommend generating a number of different clusters of synonyms of varying sizes, and configure these as separate fields with higher field weights applied to the small clusters (i.e. generated with a larger k value).
 
 ## Required Python libraries:
 
