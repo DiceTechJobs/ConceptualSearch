@@ -64,7 +64,6 @@ if len(sys.argv) != 2:
 
 config = GenerateClusterSynonymsConfig(sys.argv[1])
 
-script_start = time.time()
 model = Word2Vec.load(config.model_file)
 print("Word2Vec model loaded")
 
@@ -97,6 +96,7 @@ lbl2cluster = extract_clusters(ids, id2kwd)
 
 with open(config.synonyms_file, "w+") as f:
     for lbl, words in lbl2cluster.items():
-        f.write(str(lbl) + "|")
         line = ",".join(sorted(words))
-        f.write(line + "\n")
+        f.write(line)
+        f.write("=>")
+        f.write("cl_" + str(lbl) + "\n")
