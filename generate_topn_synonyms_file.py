@@ -1,7 +1,6 @@
 import time
 from gensim.models.word2vec import Word2Vec
-from Utils.string_utils import clean_str
-from Utils.file_utils import find_files, load_stop_words
+from Utils.file_utils import load_stop_words
 from Config.generate_topn_synonyms_config import GenerateTopNSynonymsConfig
 import sys
 
