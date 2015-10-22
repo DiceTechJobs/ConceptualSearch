@@ -50,7 +50,7 @@ Google released a set of pre-trained word vectors, trained on a 100 billion word
 model = Word2Vec.load(MODEL_FILE)
 ```
 ## A Note on Synonym File Sizes
-If you are using Solr cloud, Zookeeper does not like any config files to be over 1M in size. So if your resulting synonym files are larger than this, you will either have to 1) change the default zookeeper settings, 2) split the synonym file into mutliple files and apply synonym filters in sequence, or 3) load synonyms from a database using a plugin (e.g. https://github.com/shopping24/solr-jdbc-synonyms)
+If you are using Solr cloud, Zookeeper does not like any config files to be over 1M in size. So if your resulting synonym files are larger than this, you will either have to either 1) change the default zookeeper settings, 2) split the synonym file into mutliple files and apply synonym filters in sequence, or 3) load synonyms from a database using a plugin (e.g. https://github.com/shopping24/solr-jdbc-synonyms)
 
 ## Stanford's Glove Vectors
 Stanford's NLP boffins developed a competing word vector learning algorithm to Word2Vec with similar accuracy. If you want to experiment with that, this python package will allow you to do so:
