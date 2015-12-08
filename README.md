@@ -57,5 +57,5 @@ Stanford's NLP boffins developed a competing word vector learning algorithm to W
 https://github.com/hans/glove.py
 I haven't however tried that so I can't vouch for it at this time.
 
-Please post any questions, bugs or feature requests to the issues list.
+Please post any questions, bugs or feature requests to the issues list, and include an @mention - @simonhughes22 so I'll get a timely email with your questions.
 
