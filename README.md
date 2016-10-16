@@ -1,7 +1,15 @@
 # DiceTechJobs - Conceptual Search
 
-Dice Tech Job - Dice.com's repository for building a 'Conceptual Search Engine', by Simon Hughes ( Dice Data Scientist ). This repository contains Python code for training Thomas Mikolov's Word2Vec model on a set of documents. The output of this process can then be embedded in solr (or some other search engine) using synonym files combined with some solr plug-ins to provide conceptual search functionality within the search engine. The output could also be used within other search engines, provided they support synonym files. Conceptual search is also known as semantic search, and learns to match across concepts in a domain rather than keywords to improve recall.
+Dice Tech Jobs - Dice.com's repository for building a 'Conceptual Search Engine', by Simon Hughes ( Dice Data Scientist ). This repository contains Python code for training Thomas Mikolov's Word2Vec model on a set of documents. The output of this process can then be embedded in solr (or some other search engine) using synonym files combined with some solr plug-ins to provide conceptual search functionality within the search engine. The output could also be used within other search engines, provided they support synonym files. Conceptual search is also known as semantic search, and learns to match across concepts in a domain rather than keywords to improve recall.
 
+## Links
+* [Slides from the talk](http://www.slideshare.net/lucidworks/implementing-conceptual-search-in-solr-using-lsa-and-word2vec-presented-by-simon-hughes-dicecom)
+* [Video of the Talk](https://www.youtube.com/watch?v=WYOkb1BQG2E)
+* [Recap of Lucene Revolution 2015 by Open Source Connections](http://opensourceconnections.com/blog/2015/10/29/lucene-revolution-2015-austin/)
+* [Related: Semantic Search with LSA - Open Source Connections](http://opensourceconnections.com/blog/2016/03/29/semantic-search-with-latent-semantic-analysis/)
+* [Lucidworks: Focusing on Search Quality in Lucene Revolution 2015](https://lucidworks.com/blog/2015/10/19/focusing-on-search-quality-at-lucenesolr-revolution-2015/)
+
+## Description
 The scripts include code to pre-process and tokenize documents, extract common terms and phrases based on document frequency, train a word2vec model using the gensim implementation, and cluster the resulting word vectors using sci-kit learn's clustering libraries. The python scripts output a number of solr synonym files which can be used to enable conceptual search functionality within solr when combined with some custom dice solr plugins.
 
 See https://github.com/DiceTechJobs/SolrPlugins for solr plugins to utilize the learned vectors and synonym files within an Apache Solr search engine
