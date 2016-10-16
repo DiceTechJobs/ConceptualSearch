@@ -1,4 +1,4 @@
-# DiceTechJobs / Conceptual Search
+# DiceTechJobs - Conceptual Search
 
 Dice Tech Job - Dice.com's repository for building a 'Conceptual Search Engine', by Simon Hughes ( Dice Data Scientist ). This repository contains Python code for training Thomas Mikolov's Word2Vec model on a set of documents. The output of this process can then be embedded in solr (or some other search engine) using synonym files combined with some solr plug-ins to provide conceptual search functionality within the search engine. The output could also be used within other search engines, provided they support synonym files. Conceptual search is also known as semantic search, and learns to match across concepts in a domain rather than keywords to improve recall.
 
