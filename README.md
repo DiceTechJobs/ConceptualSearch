@@ -71,3 +71,7 @@ The intial scripts expect a folder containing raw \*.txt or html files. If you h
 ## Troubleshooting \ Errors
 Please post any questions, bugs or feature requests to the issues list, and include an @mention - @simonhughes22 so I'll get a timely email with your questions. I have had a few people email me directly with questions about this repo. While I don't mind responding to emails, **Please instead submit a GitHub issue and @mention me.** That way, everyone else can see the question and my response for future reference.
 
+## Other Tools
+Please check out our Solr plugins:
+- https://github.com/DiceTechJobs/SolrPlugins
+- https://github.com/DiceTechJobs/RelevancyFeedback
