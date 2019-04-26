@@ -2,6 +2,10 @@
 
 Dice Tech Jobs - Dice.com's repository for building a 'Conceptual Search Engine', by Simon Hughes ( Dice Data Scientist ). This repository contains Python code for training Thomas Mikolov's Word2Vec model on a set of documents. The output of this process can then be embedded in solr (or some other search engine) using synonym files combined with some solr plug-ins to provide conceptual search functionality within the search engine. The output could also be used within other search engines, provided they support synonym files. Conceptual search is also known as semantic search, and learns to match across concepts in a domain rather than keywords to improve recall.
 
+Please also check out my 'Vectors in Search' repo, which extends this work. It contains links to the slides and video from that talk also.
+- https://github.com/DiceTechJobs/VectorsInSearch
+
+
 ## Links
 * [Slides from the talk](http://www.slideshare.net/lucidworks/implementing-conceptual-search-in-solr-using-lsa-and-word2vec-presented-by-simon-hughes-dicecom)
 * [Video of the Talk](https://www.youtube.com/watch?v=WYOkb1BQG2E)
@@ -71,7 +75,10 @@ The intial scripts expect a folder containing raw \*.txt or html files. If you h
 ## Troubleshooting \ Errors
 Please post any questions, bugs or feature requests to the issues list, and include an @mention - @simonhughes22 so I'll get a timely email with your questions. I have had a few people email me directly with questions about this repo. While I don't mind responding to emails, **Please instead submit a GitHub issue and @mention me.** That way, everyone else can see the question and my response for future reference.
 
-## Other Tools
+## Other Tools / Repos
+I recently gave a talk on Vector Search, code is below. This is a natural extension of the conceptual search work I did
+- https://github.com/DiceTechJobs/VectorsInSearch
+
 Please check out our Solr plugins:
 - https://github.com/DiceTechJobs/SolrPlugins
 - https://github.com/DiceTechJobs/RelevancyFeedback
